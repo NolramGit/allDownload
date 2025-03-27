@@ -3,7 +3,7 @@ const { execFile } = require('child_process');
 const path = require('path');
 
 const app = express();
-const puerto = 3000;
+const port = process.env.PORT || 8080;
 
 // Ruta que ejecutará el archivo de texto
 app.get('/', (req, res) => {
@@ -22,6 +22,6 @@ app.get('/', (req, res) => {
 });
 
 // Iniciar el servidor
-app.listen(puerto, () => {
-  console.log(`Servidor corriendo en http://localhost:${puerto}`);
+app.listen(port, () => {
+  console.log(`Servidor corriendo en http://localhost:${port}`);
 });
