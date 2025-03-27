@@ -1,2 +1,2 @@
 # allDownload
-Download all videos
+Download all videos from social media.

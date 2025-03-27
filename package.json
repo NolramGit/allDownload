@@ -1,0 +1,23 @@
+{
+  "name": "alldownload",
+  "version": "1.0.0",
+  "description": "Download all videos from social media",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NolramGit/allDownload.git"
+  },
+  "author": "Marlon Amado (Nolram)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NolramGit/allDownload/issues"
+  },
+  "homepage": "https://github.com/NolramGit/allDownload#readme",
+  "dependencies": {
+    "@distube/ytdl-core": "^4.16.5",
+    "express": "^4.21.2"
+  }
+}
