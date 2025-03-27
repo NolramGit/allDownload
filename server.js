@@ -4,16 +4,18 @@ const port = process.env.PORT || 8080;
 const ytdl = require("@distube/ytdl-core");
 
 function get_ytdl(){
-    let videoTitle;
     // Get video info
-    ytdl.getBasicInfo("http://www.youtube.com/watch?v=aqz-KE-bpKQ").then(info => {
-        videoTitle = info.videoDetails.title;
+    const videoTitle = ytdl.getBasicInfo("http://www.youtube.com/watch?v=aqz-KE-bpKQ")
+    .then(info => {
+        return  info.videoDetails.title;
     });
     return videoTitle;
 }
 
-app.get('/', (req, res) =>{
-    res.send(get_ytdl())
+app.get('/', async (req, res) =>{
+    const a = await get_ytdl()
+    console.log(a) 
+    res.send('server om!')
 })
 
 
